@@ -1,4 +1,4 @@
-import {Image} from 'react-native';
+import {Image, TouchableOpacity} from 'react-native';
 import {Question} from 'phosphor-react-native';
 import styled from 'styled-components/native';
 
@@ -14,6 +14,6 @@ export const Logo = styled(Image)`
     height: 100px;
 `;
 
-export const IconWrapper = styled.View``;
+export const IconWrapper = styled(TouchableOpacity)``;
 
 export const Icon = styled(Question)``;
