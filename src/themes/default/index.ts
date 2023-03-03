@@ -13,4 +13,11 @@ export const defaultTheme = {
         BOLD: 'Roboto-Bold',
         ITALIC: 'Roboto-Italic',
     },
+
+    FONT_SIZE: {
+        sm: 14,
+        md: 16,
+        xl: 18,
+        '2xl': 20,
+    },
 } as const;

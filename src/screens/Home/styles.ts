@@ -1,5 +1,5 @@
 import {Quotes} from 'phosphor-react-native';
-import styled from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
 
 export const Container = styled.View`
     padding: 0 24px;
@@ -14,9 +14,11 @@ export const Wrapper = styled.View`
 `;
 
 export const Title = styled.Text`
-    color: ${({theme}) => theme.COLORS.BLUE_400};
-    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
-    font-size: 18px;
+    ${({theme}) => css`
+        color: ${theme.COLORS.BLUE_400};
+        font-family: ${theme.FONT_FAMILY.BOLD};
+        font-size: ${theme.FONT_SIZE['2xl']}px;
+    `}
     width: 100%;
     text-align: center;
 `;
@@ -31,14 +33,18 @@ export const QuoteIcon = styled(Quotes).attrs(({theme}) => ({
 `;
 
 export const Verse = styled.Text`
-    font-family: ${({theme}) => theme.FONT_FAMILY.ITALIC};
-    font-size: 16px;
+    ${({theme}) => css`
+        font-family: ${theme.FONT_FAMILY.ITALIC};
+        font-size: ${theme.FONT_SIZE.xl}px;
+    `}
     text-align: justify;
 `;
 
 export const Reference = styled.Text`
-    font-family: ${({theme}) => theme.FONT_FAMILY.BOLD};
-    font-size: 14px;
+    ${({theme}) => css`
+        font-family: ${theme.FONT_FAMILY.BOLD};
+        font-size: ${theme.FONT_SIZE.md}px;
+    `};
     width: 100%;
     text-align: center;
 `;

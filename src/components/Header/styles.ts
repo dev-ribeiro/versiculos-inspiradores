@@ -16,4 +16,6 @@ export const Logo = styled(Image)`
 
 export const IconWrapper = styled(TouchableOpacity)``;
 
-export const Icon = styled(Question)``;
+export const Icon = styled(Question).attrs(() => ({
+    size: 26,
+}))``;
