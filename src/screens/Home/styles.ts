@@ -36,6 +36,7 @@ export const Verse = styled.Text`
     ${({theme}) => css`
         font-family: ${theme.FONT_FAMILY.ITALIC};
         font-size: ${theme.FONT_SIZE.xl}px;
+        color: ${theme.COLORS.BLACK};
     `}
     text-align: justify;
 `;
@@ -44,6 +45,7 @@ export const Reference = styled.Text`
     ${({theme}) => css`
         font-family: ${theme.FONT_FAMILY.BOLD};
         font-size: ${theme.FONT_SIZE.md}px;
+        color: ${theme.COLORS.BLACK};
     `};
     width: 100%;
     text-align: center;
