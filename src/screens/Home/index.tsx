@@ -1,5 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
+import {api} from '../../lib/axios';
+import {SECRET_KEY} from '@env';
 import {Button} from '../../components/Button';
 import {Header} from '../../components/Header';
 import {
@@ -13,6 +15,18 @@ import {
 } from './styles';
 
 export function Home() {
+    async function fetchData() {
+        try {
+            const response = await api.get('chapters/random', {
+                headers: {key: SECRET_KEY},
+            });
+
+            console.log(response.data);
+        } catch (error: any) {
+            console.error(JSON.parse(JSON.stringify(error)));
+        }
+    }
+
     return (
         <Container>
             <Wrapper>
@@ -30,7 +44,7 @@ export function Home() {
                     <Reference>Efésios 1:18</Reference>
                 </VerseContainer>
             </Wrapper>
-            <Button content="Buscar nova mensagem" />
+            <Button content="Buscar nova mensagem" onPress={fetchData} />
         </Container>
     );
 }
